@@ -1,0 +1,65 @@
+<form class="form-horizontal form-complex">
+    <!-- Splunk Search Query -->
+    <div class="control-group">
+        <label class="control-label" for="splunk_query">Search Query</label>
+        <div class="controls">
+            <input type="text" class="input-xlarge" name="action.seq_alert.param.query" id="splunk_query"
+                placeholder="search index=your_index_name | stats count by field_name" />
+            <small class="text-muted">
+                Enter your Splunk search query. Example: 
+                <code>search index=main | stats count by clientip</code>
+            </small>
+        </div>
+    </div>
+
+    <!-- Saved Search Name -->
+    <div class="control-group">
+        <label class="control-label" for="saved_search">Saved Search</label>
+        <div class="controls">
+            <input type="text" class="input-xlarge" name="action.seq_alert.param.report_name" id="saved_search"
+                placeholder="Enter the name of the saved search" />
+            <small class="text-muted">
+                Specify the name of the saved search you want to execute. It is Case Sensitive. Example: 
+                <code>Weekly Traffic Analysis</code>
+            </small>
+        </div>
+    </div>
+
+    <!-- Splunk Username -->
+    <div class="control-group">
+        <label class="control-label" for="splunk_user">Splunk Username</label>
+        <div class="controls">
+            <input type="text" class="input-xlarge" name="action.seq_alert.param.username" id="splunk_user"
+                placeholder="admin" />
+            <small class="text-muted">
+                Enter your Splunk username. Default username is usually 
+                <code>admin</code>.
+            </small>
+        </div>
+    </div>
+
+    <!-- Splunk Password -->
+    <div class="control-group">
+        <label class="control-label" for="splunk_password">Splunk Password</label>
+        <div class="controls">
+            <input type="password" class="input-xlarge" name="action.seq_alert.param.password" id="splunk_password"
+                placeholder="your password" />
+            <small class="text-muted">Enter the password for the specified Splunk user.</small>
+        </div>
+    </div>
+
+    <!-- Splunk API URL -->
+    <div class="control-group">
+        <label class="control-label" for="splunk_url">Splunk API URL</label>
+        <div class="controls">
+            <input type="text" class="input-xlarge" name="action.seq_alert.param.url" id="splunk_url"
+                placeholder="https://<splunk-host>:8089/services/search/jobs" />
+            <small class="text-muted">
+                Enter the Splunk API URL. Example: 
+                <code>https://localhost:8089/services/search/jobs</code> for local Splunk instance,
+                or 
+                <code>https://splunk.example.com:8089/services/search/jobs</code> for a remote server.
+            </small>
+        </div>
+    </div>
+</form>
