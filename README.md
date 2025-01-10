@@ -1,5 +1,5 @@
 # Splunk Sequential Alert
-This repository contains a **custom Splunk Alert App** Action that allows you to automatically execute an AdHoc search or a predefined Saved Search (Alert) when a Splunk alert is triggered.\
+This repository contains a **Custom Splunk Alert Action App** Action that allows you to automatically execute an AdHoc search or a predefined Saved Search (Alert) when a Splunk alert is triggered.\
 This Alert Action is ideal for scenarios where additional searches or actions need to be executed automatically after an alert is fired.
 > **Note:** These scripts were developed with the help of ChatGPT.
 # Installation Instructions
